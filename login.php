@@ -65,6 +65,6 @@ try
 		$mysqli->close();
 	}
 } catch(Exception $e){
-	$_SESSION['blad'] = '<span style="color:red">'.$e->getMessage().'</span>';
+	$_SESSION['blad'] = '<div class="alert alert-danger" role="alert" style="margin-top: 10px"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> '.$e->getMessage().'</div>';
 	header('Location: index.php');
 }
