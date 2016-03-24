@@ -59,14 +59,6 @@ CREATE TABLE `user` (
   `fats` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
---
--- Zrzut danych tabeli `user`
---
-
-INSERT INTO `user` (`userID`, `login`, `passwd`, `firstname`, `lastname`, `email`, `height`, `weight`, `age`, `activity`, `bodytype`, `sex`, `kcal`, `proteins`, `carbs`, `fats`) VALUES
-(1, 'bartus', '0c6d934e6c1aaf3e85280b6d2c08444c', 'Qwe', 'Rty', 'qwerty@example.com', 99, 88, 11, 'verybig', 'mesomorph', 'male', 1, 2, 3, 4),
-(2, 'qwerty', '58b4e38f66bcdb546380845d6af27187', 'PPP', 'MMM', 'brty@o2.pl', 11, 22, 33, 'medium', NULL, 'female', NULL, NULL, NULL, NULL),
-(3, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -94,7 +86,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT dla tabeli `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Ograniczenia dla zrzutów tabel
 --
