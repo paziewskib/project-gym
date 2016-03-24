@@ -37,10 +37,10 @@ session_start();
 			unset($_SESSION['e_email']);
 		}
 	?>
-	<label for="exampleInputEmail1">Has³o:</label>
-	<input type="password" name="haslo1"  class="form-control" placeholder="Has³o"><br>
-	<label for="exampleInputEmail1">Powtórz has³o:</label>
-	<input type="password" name="haslo2" class="form-control" placeholder="Powtórz has³o"><br>
+	<label for="exampleInputEmail1">HasÅ‚o:</label>
+	<input type="password" name="haslo1"  class="form-control" placeholder="HasÅ‚o"><br>
+	<label for="exampleInputEmail1">PowtÃ³rz hasÅ‚o:</label>
+	<input type="password" name="haslo2" class="form-control" placeholder="PowtÃ³rz hasÅ‚o"><br>
 	<?php
 		if(isset($_SESSION['e_haslo']))
 		{

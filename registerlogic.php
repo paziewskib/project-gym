@@ -56,13 +56,13 @@ session_start();
 			*/
 			require_once "connect.php";
 			try
-			{
-				if($mysqli->connect_errno!=0)
-				{
-					throw new Exeption(mysqli_connect_errno());
-				}	
-				else
-				{
+                {
+                    if($mysqli->connect_errno!=0)
+                    {
+                        throw new Exeption(mysqli_connect_errno());
+                    }
+                    else
+                    {
 					$result = $mysqli->query("SELECT userID FROM user WHERE login = '$login'");
 					if(!$result) throw new Exeption($mysqli->error);
 
