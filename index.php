@@ -54,8 +54,8 @@ session_start();
                         <input type="text" name="login" class="form-control" placeholder="Login" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group" style="margin-top: 10px; width: 95%; margin-left: 5px; margin-right: 5px;">
-                        <p style="font-size: 20px; margin-left: 5px; margin-right: 5px;">Has?o:</p>
-                        <input type="password" name="haslo" class="form-control" placeholder="Has?o" aria-describedby="basic-addon1">
+                        <p style="font-size: 20px; margin-left: 5px; margin-right: 5px;">Hasło:</p>
+                        <input type="password" name="haslo" class="form-control" placeholder="Hasło" aria-describedby="basic-addon1">
                     </div>
                         <input type="submit" value="Zaloguj się" type="button" class="btn btn-primary" style="margin-top: 20px; margin-left: 5px; margin-bottom: 10px;">
                 </form>
