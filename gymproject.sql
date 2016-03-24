@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 09 Mar 2016, 17:42
+-- Czas generowania: 24 Mar 2016, 12:12
 -- Wersja serwera: 10.1.9-MariaDB
 -- Wersja PHP: 5.6.15
 
@@ -51,12 +51,22 @@ CREATE TABLE `user` (
   `weight` int(11) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `activity` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
+  `bodytype` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
   `sex` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
   `kcal` int(11) DEFAULT NULL,
   `proteins` int(11) DEFAULT NULL,
   `carbs` int(11) DEFAULT NULL,
   `fats` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `user`
+--
+
+INSERT INTO `user` (`userID`, `login`, `passwd`, `firstname`, `lastname`, `email`, `height`, `weight`, `age`, `activity`, `bodytype`, `sex`, `kcal`, `proteins`, `carbs`, `fats`) VALUES
+(1, 'bartus', '0c6d934e6c1aaf3e85280b6d2c08444c', 'Qwe', 'Rty', 'qwerty@example.com', 99, 88, 11, 'verybig', 'mesomorph', 'male', 1, 2, 3, 4),
+(2, 'qwerty', '58b4e38f66bcdb546380845d6af27187', 'PPP', 'MMM', 'brty@o2.pl', 11, 22, 33, 'medium', NULL, 'female', NULL, NULL, NULL, NULL),
+(3, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -84,7 +94,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT dla tabeli `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Ograniczenia dla zrzutów tabel
 --
