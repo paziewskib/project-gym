@@ -86,7 +86,7 @@ session_start();
 					if($walidacja == true)
 					{
 						
-						if($mysqli->query("INSERT INTO user VALUES(NULL, '$login', '$haslo_hash', NULL, NULL, '$email', NULL, NULL, NULL, NULL, '$gender', NULL, NULL, NULL, NULL)"))
+						if($mysqli->query("INSERT INTO user VALUES(NULL, '$login', '$haslo_hash', NULL, NULL, '$email', NULL, NULL, NULL, NULL, NULL, '$gender', NULL, NULL, NULL, NULL)"))
 						{
 							echo "udało się";
 							$_SESSION['zarejestrowano'] = true;
