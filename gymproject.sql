@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 09 Mar 2016, 17:42
+-- Czas generowania: 24 Mar 2016, 12:12
 -- Wersja serwera: 10.1.9-MariaDB
 -- Wersja PHP: 5.6.15
 
@@ -51,12 +51,14 @@ CREATE TABLE `user` (
   `weight` int(11) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `activity` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
+  `bodytype` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
   `sex` varchar(16) COLLATE utf8_polish_ci DEFAULT NULL,
   `kcal` int(11) DEFAULT NULL,
   `proteins` int(11) DEFAULT NULL,
   `carbs` int(11) DEFAULT NULL,
   `fats` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
 
 --
 -- Indeksy dla zrzutów tabel

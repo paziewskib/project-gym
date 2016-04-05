@@ -10,7 +10,7 @@ session_start();
 			if(strlen($login)<3 || strlen($login)>15)
 			{
 				$walidacja = false;
-				$_SESSION['e_login'] = "Niepoprawna długość loginu";
+				$_SESSION['e_login'] = "<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Niepoprawna długość loginu</div>";
 			}
 			/*if(ctype_alnum($login) == false)
 			{
@@ -20,7 +20,7 @@ session_start();
 			if(!preg_match("/^[a-zA-Z ]*$/",$login)) 
 			{
 				$walidacja = false;
-			  	$_SESSION['e_login'] = "Login musi składać się ze znaków alfanumerycznych"; 
+			  	$_SESSION['e_login'] = "<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Login musi składać się ze znaków alfanumerycznych</div>"; 
 			}
 			//Sprawdzanie poprawnosci maila
 			$email = $_POST['email'];
@@ -29,7 +29,7 @@ session_start();
 			if((!filter_var($emailB, FILTER_VALIDATE_EMAIL)) || ($emailB!=$email))
 			{
 				$walidacja = false;
-				$_SESSION['e_email'] = "Podaj poprawny adres E-Mail!";
+				$_SESSION['e_email'] = "<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Podaj poprawny adres E-Mail!</div>";
 			}
 			//Sprawdzanie poprawnosci hasla
 			$haslo1 = $_POST['haslo1'];
@@ -37,12 +37,12 @@ session_start();
 			if((strlen($haslo1)<8) || (strlen($haslo1)>20))
 			{
 				$walidacja=false;
-				$_SESSION['e_haslo']="Hasło musi posiadać od 8 do 20 znaków!";
+				$_SESSION['e_haslo']="<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Hasło musi posiadać od 8 do 20 znaków!</div>";
 			}
 			if($haslo1!=$haslo2)
 			{
 				$walidacja=false;
-				$_SESSION['e_haslo']="Podane hasła nie są identyczne!";
+				$_SESSION['e_haslo']="<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Podane hasła nie są identyczne!</div>";
 			}
 			$haslo_hash = md5($haslo1);
 			//Sprawdzanie radio-group'a
@@ -56,13 +56,13 @@ session_start();
 			*/
 			require_once "connect.php";
 			try
-			{
-				if($mysqli->connect_errno!=0)
-				{
-					throw new Exeption(mysqli_connect_errno());
-				}	
-				else
-				{
+                {
+                    if($mysqli->connect_errno!=0)
+                    {
+                        throw new Exeption(mysqli_connect_errno());
+                    }
+                    else
+                    {
 					$result = $mysqli->query("SELECT userID FROM user WHERE login = '$login'");
 					if(!$result) throw new Exeption($mysqli->error);
 
@@ -70,7 +70,7 @@ session_start();
 					if($user_count>0)
 					{
 						$walidacja = false;
-			   		 	$_SESSION['e_login'] = "Login jest już zajęty";
+			   		 	$_SESSION['e_login'] = "<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>Login jest już zajęty</div>";
 					}
 
 					$result = $mysqli->query("SELECT userID FROM user WHERE email = '$email'");
@@ -80,13 +80,13 @@ session_start();
 					if($email_count>0)
 					{
 						$walidacja = false;
-			   		 	$_SESSION['e_email'] = "E-Mail jest już zajęty";
+			   		 	$_SESSION['e_email'] = "<div class='alert alert-danger' role='alert' style='margin-bottom: 5px'>E-Mail jest już zajęty</div>";
 					}
 
 					if($walidacja == true)
 					{
 						
-						if($mysqli->query("INSERT INTO user VALUES(NULL, '$login', '$haslo_hash', NULL, NULL, '$email', NULL, NULL, NULL, NULL, '$gender', NULL, NULL, NULL, NULL)"))
+						if($mysqli->query("INSERT INTO user VALUES(NULL, '$login', '$haslo_hash', NULL, NULL, '$email', NULL, NULL, NULL, NULL, NULL, '$gender', NULL, NULL, NULL, NULL)"))
 						{
 							echo "udało się";
 							$_SESSION['zarejestrowano'] = true;
