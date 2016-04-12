@@ -156,10 +156,10 @@ if(!isset($_SESSION['zalogowano']))
                         }
                         ?>
                     </div>
-            </form>
             <div class="modal-footer">
                 <input type="submit" class="btn btn-primary" value="Edycja profilu">
             </div>
+            </form>
             </div>
         </div>
         </div>
