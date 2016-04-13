@@ -68,7 +68,6 @@ session_start();
 						
 						if($mysqli->query("UPDATE user SET firstname = '$firstname', lastname = '$lastname', email = '$email', height = '$height', weight = '$weight', activity = '$activity', age = '$age', bodytype = '$bodytype' WHERE userID='$idUser'"))
 						{
-							echo "profil edytowany";
 							header('Location: pu.php');
 							exit();
 						}

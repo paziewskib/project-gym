@@ -21,8 +21,29 @@ if(!isset($_SESSION['zalogowano']))
 </head>
 <body>
 
+<div class="container">
+    <nav class="navbar navbar-default" style="margin-top: 20px; border-color: #d6d6d6;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="glyphicon glyphicon-th-list"/>
+                </button>
+                <a class="navbar-brand" href="index.php">GymProject</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
 
-<a href="logout.php">Wyloguj się</a>
+                    <li><a href="exercise.html">Zobacz Ćwiczenia</a></li>
+                    <li><a href="rejestracja.php">Załóż konto</a></li>
+                    <li><a href="contact.php">Kontakt</a></li>
+                    <li class="active"><a href="#">Panel Użytkownika</a></li>
+                    <li><a href="logout.php">Wyloguj się</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <br><br>
 <div class="container">
         <div class="jumbotron" style="background-color: #f8f8f8; border-style: solid; border-width: 1px; border-color: #d6d6d6;">
