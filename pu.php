@@ -33,7 +33,7 @@ if(!isset($_SESSION['zalogowano']))
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
 
-                    <li><a href="exercise.html">Zobacz Ćwiczenia</a></li>
+                    <li><a href="exercise.php">Zobacz Ćwiczenia</a></li>
                     <li><a href="rejestracja.php">Załóż konto</a></li>
                     <li><a href="contact.php">Kontakt</a></li>
                     <li class="active"><a href="#">Panel Użytkownika</a></li>

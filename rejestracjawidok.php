@@ -23,7 +23,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
 
-                    <li><a href="exercise.html">Zobacz Ćwiczenia</a></li>
+                    <li><a href="exercise.php">Zobacz Ćwiczenia</a></li>
                     <li class="active"><a href="rejestracja.php">Załóż konto</a></li>
                     <li><a href="contact.php">Kontakt</a></li>
                     <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>

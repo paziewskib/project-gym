@@ -21,13 +21,15 @@ session_start();
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="glyphicon glyphicon-th-list"/>
                 </button>
-                <a class="navbar-brand" href="#">GymProject</a>
+                <a class="navbar-brand" href="index.php">GymProject</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
 
-                    <li><a href="exercise.html">Zobacz Ćwiczenia</a></li>
-                    <li><a href="register.php">Załóż konto</a></li>
+                    <li class="active"><a href="exercise.php">Zobacz Ćwiczenia</a></li>
+                    <li><a href="rejestracja.php">Załóż konto</a></li>
+                    <li><a href="contact.php">Kontakt</a></li>
+                    <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>   
                 </ul>
             </div>
         </div>
