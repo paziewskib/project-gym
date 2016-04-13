@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-
-<?php
-session_start();
-?>
-
 <html lang="pl">
 <head>
-    <title>Formularz Kontaktowy</title>
+    <title>Rejestracja</title>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,8 +24,8 @@ session_start();
                 <ul class="nav navbar-nav navbar-left">
 
                     <li><a href="exercise.html">Zobacz Ćwiczenia</a></li>
-                    <li><a href="rejestracja.php">Załóż konto</a></li>
-                    <li class="active"><a href="contact.php">Kontakt</a></li>
+                    <li class="active"><a href="rejestracja.php">Załóż konto</a></li>
+                    <li><a href="contact.php">Kontakt</a></li>
                     <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>
                 </ul>
             </div>
@@ -41,30 +36,28 @@ session_start();
 	<div class="container" style="margin-top: 20px; width: 550px;">
     <div class="panel panel-default" style="border-color: #d6d6d6;">
         <div class="panel-heading">
-            <p style="font-size: 30px; margin-top: 10px;">Kontakt</p>
+            <p style="font-size: 30px; margin-top: 10px;">Rejestracja</p>
         </div> 
     	<form action="" method="post" id="form" style=" width: 500px; margin: 10px auto">
             <div class="form-group">
             	<fieldset>
                 
-                	<label for="name">Imię: <i>*</i></label>
+                	<label for="name">Login: <i>*</i></label>
                     <input type="text" name="name" id="name" class="req form-control" value="<?php echo $form['name']; ?>" />
                     <?php echo $error['name']; ?>
-                    
-                    <label for="phone">Telefon: <i>*</i></label>
-                    <input type="text" name="phone" id="phone" class="req form-control" value="<?php echo $form['phone']; ?>" />
-                    <?php echo $error['phone']; ?>
                     
                     <label for="email">Email: <i>*</i></label>
                     <input type="text" name="email" id="email" class="req form-control" value="<?php echo $form['email']; ?>" />
                     <?php echo $error['email']; ?>
 
-                    <label for="subject">Temat: <i>*</i></label>
-                    <input type="text" name="subject" id="subject" class="req form-control" value="<?php echo $form['subject']; ?>" />
-                    <?php echo $error['subject']; ?>
+                    <label for="haslo1">Hasło: <i>*</i></label>
+                    <input type="password" name="haslo1" id="haslo1" class="req form-control" value="<?php echo $form['haslo1']; ?>" />
+                    <?php echo $error['haslo1']; ?>
+
+                    <label for="haslo2">Powtórz hasło: <i>*</i></label>
+                    <input type="password" name="haslo2" id="haslo2" class="req form-control" value="<?php echo $form['haslo2']; ?>" />
+                    <?php echo $error['haslo2']; ?>
                     
-                    <label for="message">Wiadomość: </label>
-                    <textarea class="form-control" name="message" id="message" style="height: 200px;"><?php echo $form['message']; ?></textarea>
                     
                     <p>* - pola wymagane</p>
                     
