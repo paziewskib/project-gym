@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 24 Mar 2016, 12:12
+-- Czas generowania: 18 Kwi 2016, 16:13
 -- Wersja serwera: 10.1.9-MariaDB
 -- Wersja PHP: 5.6.15
 
@@ -31,8 +31,23 @@ CREATE TABLE `exercise` (
   `exerciseName` varchar(128) COLLATE utf8_polish_ci NOT NULL,
   `numberOfSets` int(11) DEFAULT NULL,
   `numberOfReps` int(11) DEFAULT NULL,
-  `userID` int(11) NOT NULL
+  `userID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `exercise`
+--
+
+INSERT INTO `exercise` (`exerciseID`, `exerciseName`, `numberOfSets`, `numberOfReps`, `userID`) VALUES
+(1, 'Przysiady ze sztangą', NULL, 4, NULL),
+(2, 'Wyciskanie sztangi leżąc', NULL, 4, NULL),
+(3, 'Podciąganie na drążku', 3, 5, NULL),
+(4, 'Martwy ciąg', NULL, 3, NULL),
+(5, 'Wyciskanie sztangi z klatki', NULL, 3, NULL),
+(6, 'Uginanie przedramion ze sztangą', NULL, 3, NULL),
+(7, 'Francuskie wyciskanie sztangi leżąc', NULL, 3, NULL),
+(8, 'Wspięcia na palce z hantlami', NULL, 2, NULL),
+(9, 'Skłony na ławce skośnej', NULL, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -58,7 +73,6 @@ CREATE TABLE `user` (
   `carbs` int(11) DEFAULT NULL,
   `fats` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
 
 --
 -- Indeksy dla zrzutów tabel
@@ -86,7 +100,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT dla tabeli `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Ograniczenia dla zrzutów tabel
 --

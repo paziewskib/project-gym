@@ -140,10 +140,10 @@ if(!isset($_SESSION['zalogowano']))
                         }
                         ?>
                         Aktywność:<br>
-                        <label class="radio-inline"><input id="inlineRadioSmall" class="radio-inline" type="radio" name="activity" value="small">Nisko aktywny</label>
-                        <label class="radio-inline"><input id="inlineRadioMedium" class="radio-inline" type="radio" name="activity" value="medium">Średnio aktywny</label>
-                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="activity" value="big">Aktywny</label>
-                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="activity" value="verybig">Bardzo aktywny</label>
+                        <label class="radio-inline"><input id="inlineRadioSmall" class="radio-inline" type="radio" name="activity" value="1.0">Nisko aktywny</label>
+                        <label class="radio-inline"><input id="inlineRadioMedium" class="radio-inline" type="radio" name="activity" value="1.15">Średnio aktywny</label>
+                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="activity" value="1.35">Aktywny</label>
+                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="activity" value="1.5">Bardzo aktywny</label>
                         <br>
                         <?php
                         if(isset($_SESSION['e_activity']))
@@ -154,9 +154,9 @@ if(!isset($_SESSION['zalogowano']))
                         ?>
 
                         Typ budowy ciała:<br>
-                        <label class="radio-inline"><input id="inlineRadioSmall" class="radio-inline" type="radio" name="bodytype" value="ectomorph">Ektomorfik</label>
-                        <label class="radio-inline"><input id="inlineRadioMedium" class="radio-inline" type="radio" name="bodytype" value="mesomorph">Mezomorfik</label>
-                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="bodytype" value="endomorph">Endomorfik</label>
+                        <label class="radio-inline"><input id="inlineRadioSmall" class="radio-inline" type="radio" name="bodytype" value="1.2">Ektomorfik</label>
+                        <label class="radio-inline"><input id="inlineRadioMedium" class="radio-inline" type="radio" name="bodytype" value="1.1">Mezomorfik</label>
+                        <label class="radio-inline"><input id="inlineRadioBig" class="radio-inline" type="radio" name="bodytype" value="1.0">Endomorfik</label>
                         <br>
                         <?php
                         if(isset($_SESSION['e_bodytype']))
