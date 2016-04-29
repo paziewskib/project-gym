@@ -20,7 +20,6 @@ if(!isset($_SESSION['zalogowano']))
 	<title>Panel Użytkownika</title>
 </head>
 <body>
-
 <div class="container">
     <nav class="navbar navbar-default" style="margin-top: 20px; border-color: #d6d6d6;">
         <div class="container-fluid">
@@ -76,6 +75,10 @@ if(!isset($_SESSION['zalogowano']))
                 <li class="list-group-item">
                 <p style="font-size: 20px;">Kcal, węglowodany, tłuszcze, proteiny</p>
                 <?php echo $_SESSION['kcal']," ", $_SESSION['carbs']," ", $_SESSION['fats']," ", $_SESSION['proteins'] ; ?>
+                </li>
+                </li>
+                <li class="list-group-item">
+                    <p style="font-size: 20px;">Stopień zaawansowania</p>
                 </li>
             </ul>
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edytuj profil</button>
@@ -176,6 +179,24 @@ if(!isset($_SESSION['zalogowano']))
                             unset($_SESSION['e_age']);
                         }
                         ?>
+                        <br>Stopień zaawansowania:</br>
+                        <form action="...">
+                            <select name="Stza">
+                                <option>Początkujący</option>
+                                <option>Średnioozaawansowany</option>
+                                <option>Zaawansowany</option>
+                                (...)
+                            </select>
+                        </form>
+                        <br>Ilość dni treningowych:</br>
+                        <form action="...">
+                            <select name="Idt">
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                (...)
+                            </select>
+                        </form>
                     </div>
             <div class="modal-footer">
                 <input type="submit" class="btn btn-primary" value="Edycja profilu">
