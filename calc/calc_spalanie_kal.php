@@ -29,6 +29,7 @@
                             <li><a href="calc_ptk.php">PTK</a></li>
                             <li><a href="calc_spalanie_kal.php">Spalanie</a></li>
                             <li><a href="calc_whr.php">WHR</a></li>
+                            <li><a href="calc_thee.php">TDEE</a></li>
                         </ul>
                     </li>
                     <li><a href="../contact.php">Kontakt</a></li>
