@@ -37,9 +37,10 @@ session_start();
                             <li><a href="calc/calc_ptk.php">PTK</a></li>
                             <li><a href="calc/calc_spalanie_kal.php">Spalanie</a></li>
                             <li><a href="calc/calc_whr.php">WHR</a></li>
+                            <li><a href="calc_tdee.php">TDEE</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.php">Kontakt</a></li>
+                    <li class="active"><a href="contact.php">Kontakt</a></li>
                     <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
