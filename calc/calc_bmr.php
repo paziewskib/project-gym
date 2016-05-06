@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +37,7 @@
                         </ul>
                     </li>
                     <li><a href="../contact.php">Kontakt</a></li>
-                    <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>
+                    <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='../pu.php'>Panel Użytkownika</a></li>"; } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../rejestracja.php">Załóż konto</a></li>                

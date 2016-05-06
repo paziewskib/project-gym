@@ -35,6 +35,7 @@ session_start();
                             <li><a href="calc/calc_ptk.php">PTK</a></li>
                             <li><a href="calc/calc_spalanie_kal.php">Spalanie</a></li>
                             <li><a href="calc/calc_whr.php">WHR</a></li>
+                            <li><a href="calc_tdee.php">TDEE</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.php">Kontakt</a></li>

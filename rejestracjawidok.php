@@ -38,7 +38,7 @@
                     <?php if(isset($_SESSION['zalogowano'])){ echo "<li><a href='pu.php'>Panel Użytkownika</a></li>"; } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="rejestracja.php">Załóż konto</a></li>                
+                    <li class="active"><a href="rejestracja.php">Załóż konto</a></li>                
                 </ul>
             </div>
         </div>

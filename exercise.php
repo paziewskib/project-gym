@@ -25,7 +25,7 @@ session_start();
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="exercise.php">Zobacz Ćwiczenia</a></li>
+                    <li class="active"><a href="exercise.php">Zobacz Ćwiczenia</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kalkulatory
                         <span class="caret"></span></a>
@@ -35,6 +35,7 @@ session_start();
                             <li><a href="calc/calc_ptk.php">PTK</a></li>
                             <li><a href="calc/calc_spalanie_kal.php">Spalanie</a></li>
                             <li><a href="calc/calc_whr.php">WHR</a></li>
+                            <li><a href="calc_tdee.php">TDEE</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.php">Kontakt</a></li>
