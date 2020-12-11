@@ -1,1 +1,1 @@
-<h1> The Gym Project </h1>
+<h1><b> The Gym Project </b></h1>
